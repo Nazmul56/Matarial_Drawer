@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mikepenz.materialdrawer.app" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="nazmul.app.drawer.CustomApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+
+        <!-- android:supportsRtl="true" -->
+        <activity
+            android:name="nazmul.app.drawer.SimpleHeaderDrawerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="nazmul.app.drawer.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="nazmul.app.drawer.SimpleHeaderDrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nazmul.app.drawer.SimpleHeaderDrawerActivity" />
+        </activity>
+        <activity
+            android:name="nazmul.app.drawer.BlankActivity"
+            android:label="@string/title_activity_blank"
+            android:parentActivityName="nazmul.app.drawer.SimpleHeaderDrawerActivity"
+            android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nazmul.app.drawer.SimpleHeaderDrawerActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
